@@ -1,75 +1,87 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, minimal portfolio website for UX designers built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Minimal Design**: Clean, off-white background with elegant typography
+- **Responsive**: Fully responsive design that works on all devices (mobile, tablet, desktop)
+- **Smooth Navigation**: Fixed navigation menu with smooth scrolling between sections
+- **Three Main Sections**:
+  - My Work
+  - About Me
+  - Contact
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React 19
+- TypeScript
+- Vite
+- Firebase (for hosting)
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js (v18 or higher)
+- Yarn package manager
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Install dependencies:
+```bash
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Start the development server:
+```bash
+yarn dev
 ```
+
+3. Open your browser and navigate to `http://localhost:5173`
+
+## Available Scripts
+
+- `yarn dev` - Start development server
+- `yarn build` - Build for production
+- `yarn preview` - Preview production build locally
+- `yarn lint` - Run ESLint
+- `yarn deploy` - Build and deploy to Firebase Hosting
+
+## Deployment
+
+The project is configured to deploy to Firebase Hosting. To deploy:
+
+1. Make sure you have Firebase CLI installed and are logged in
+2. Run:
+```bash
+yarn deploy
+```
+
+This will build the project and deploy it to Firebase Hosting.
+
+## Project Structure
+
+```
+portfolio/
+├── src/
+│   ├── App.tsx       # Main application component
+│   ├── App.css       # Component styles
+│   ├── index.css     # Global styles
+│   └── main.tsx      # Application entry point
+├── public/           # Static assets
+├── firebase.json     # Firebase configuration
+└── package.json      # Dependencies and scripts
+```
+
+## Customization
+
+Replace the Lorem ipsum text in `src/App.tsx` with your actual content. The design uses:
+
+- **Background**: Off-white (#FAFAFA)
+- **Text**: Off-black (#1A1A1A)
+- **Font**: Georgia serif font family
+
+## License
+
+Private project
