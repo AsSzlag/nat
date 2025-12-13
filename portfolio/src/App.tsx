@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
+import CleverCommerce from './pages/CaseStudies/CleverCommerce'
+import SellerPage from './pages/CaseStudies/SellerPage'
 
-function App() {
+function HomePage() {
   const [activeSection, setActiveSection] = useState('work')
 
   useEffect(() => {
@@ -88,13 +91,15 @@ function App() {
           <h1 className="section-title">My Work</h1>
           <div className="content">
             <p>
+              <Link to="/clever-commerce" className="work-link">
+                Clever Commerce - E-commerce Shopping Cart Prototype
+              </Link>
+            </p>
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
             <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
           </div>
         </section>
@@ -124,6 +129,18 @@ function App() {
         </section>
       </main>
     </div>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/clever-commerce" element={<CleverCommerce />} />
+        <Route path="/clever-commerce/seller/:sellerId" element={<SellerPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

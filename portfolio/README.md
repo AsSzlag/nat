@@ -56,7 +56,7 @@ The project is configured to deploy to Firebase Hosting. To deploy:
 2. Run:
 ```bash
 yarn deploy
-```
+``` 
 
 This will build the project and deploy it to Firebase Hosting.
 

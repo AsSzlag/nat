@@ -99,6 +99,16 @@
   margin-bottom: 1.5rem;
 }
 
+.work-link {
+  color: #1A1A1A;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.work-link:hover {
+  opacity: 0.6;
+}
+
 .content p:last-child {
   margin-bottom: 0;
 }
