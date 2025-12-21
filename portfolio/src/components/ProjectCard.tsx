@@ -1,4 +1,5 @@
 import React from 'react'
+import downloadIcon from '../assets/download-icon.svg'
 
 interface ProjectCardProps {
   title: string
@@ -40,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             aria-label={`${buttonText} - ${title}`}
           >
             {buttonText}
-            {hasIcon && <div className="btn-icon" aria-hidden="true"></div>}
+            {hasIcon && <img src={downloadIcon} alt="" className="btn-icon-img" aria-hidden="true" />}
           </button>
         </div>
       </div>
