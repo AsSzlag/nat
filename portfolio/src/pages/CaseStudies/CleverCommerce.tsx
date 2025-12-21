@@ -382,7 +382,7 @@ const CleverCommerce = () => {
                     <div className="cc-header-grid">
                         <div className="cc-logo">
                             <div className="cc-logo-icon">
-                                <img src={logoIcon} alt="Clever Commerce" />
+                                <img src={logoIcon} alt="" />
                             </div>
                             <span className="cc-logo-text">Clever Commerce</span>
                         </div>
@@ -465,7 +465,7 @@ const CleverCommerce = () => {
                                         {recommendedProducts.map((product) => (
                                             <div key={product.id} className="cc-carousel-item">
                                                 <div className="cc-carousel-product-image">
-                                                    <img src={product.image} alt={product.name} />
+                                                    <img src={product.image} alt="" />
                                                 </div>
                                                 <div className="cc-carousel-product-info">
                                                     <h4 className="cc-carousel-product-name">{product.name}</h4>
@@ -532,7 +532,7 @@ const CleverCommerce = () => {
                                             <React.Fragment key={product.id}>
                                                 <div className="cc-product-item">
                                                     <div className="cc-product-image">
-                                                        <img src={product.image} alt={product.name} />
+                                                        <img src={product.image} alt="" />
                                                     </div>
                                                     <div className="cc-product-details">
                                                         <div className="cc-product-main-row">
@@ -1077,7 +1077,7 @@ const CleverCommerce = () => {
                                             return (
                                                 <div key={product.id} className="cc-carousel-item">
                                                     <div className="cc-carousel-product-image">
-                                                        <img src={product.image} alt={product.name} />
+                                                        <img src={product.image} alt="" />
                                                     </div>
                                                     <div className="cc-carousel-product-info">
                                                         <h4 className="cc-carousel-product-name">{product.name}</h4>
@@ -1294,7 +1294,7 @@ const CleverCommerce = () => {
                             <div className="cc-modal-body">
                                 {service.image && (
                                     <div className="cc-service-image-container">
-                                        <img src={service.image} alt={service.name} className="cc-service-image" />
+                                        <img src={service.image} alt="" className="cc-service-image" />
                                     </div>
                                 )}
                                 
