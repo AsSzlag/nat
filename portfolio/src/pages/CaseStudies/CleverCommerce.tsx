@@ -382,7 +382,7 @@ const CleverCommerce = () => {
                     <div className="cc-header-grid">
                         <div className="cc-logo">
                             <div className="cc-logo-icon">
-                                <img src={logoIcon} alt="" />
+                                <img src={logoIcon} alt="Clever Commerce logo" />
                             </div>
                             <span className="cc-logo-text">Clever Commerce</span>
                         </div>
@@ -409,7 +409,7 @@ const CleverCommerce = () => {
                     <div className="cc-container">
                     {/* Cart Header */}
                     <div className="cc-cart-header">
-                        <h1 className="cc-cart-title">Shopping Cart ({products.length + (hasElite ? 1 : 0)})</h1>
+                        <div className="cc-cart-title">Shopping Cart ({products.length + (hasElite ? 1 : 0)})</div>
                         {products.length > 0 && (
                             <div className="cc-cart-actions">
                                 <button className="cc-action-btn" onClick={removeAllProducts}>
@@ -436,7 +436,7 @@ const CleverCommerce = () => {
                         /* Empty Cart View */
                         <div className="cc-empty-cart">
                             <div className="cc-empty-cart-message">
-                                <h2 className="cc-empty-cart-title">Your cart is empty</h2>
+                                <p className="cc-empty-cart-title">Your cart is empty</p>
                                 <p className="cc-empty-cart-text">Looks like you haven't added any items to your cart yet.</p>
                                 <Link to="/" className="cc-empty-cart-btn">
                                     Visit Home Page
@@ -444,7 +444,7 @@ const CleverCommerce = () => {
                             </div>
                             
                             <div className="cc-recommended-section">
-                                <h3 className="cc-recommended-title">Recommended for you</h3>
+                                <h2 className="cc-recommended-title">Recommended for you</h2>
                                 <div className="cc-products-carousel">
                                     {recommendedScrollState.canScrollLeft && (
                                         <button 
@@ -465,7 +465,7 @@ const CleverCommerce = () => {
                                         {recommendedProducts.map((product) => (
                                             <div key={product.id} className="cc-carousel-item">
                                                 <div className="cc-carousel-product-image">
-                                                    <img src={product.image} alt="" />
+                                                    <img src={product.image} alt={product.name} />
                                                 </div>
                                                 <div className="cc-carousel-product-info">
                                                     <h4 className="cc-carousel-product-name">{product.name}</h4>
@@ -531,19 +531,19 @@ const CleverCommerce = () => {
                                         {products.map((product, index) => (
                                             <React.Fragment key={product.id}>
                                                 <div className="cc-product-item">
-                                                    <div className="cc-product-image">
-                                                        <img src={product.image} alt="" />
-                                                    </div>
+                                            <div className="cc-product-image">
+                                                <img src={product.image} alt={product.name} />
+                                            </div>
                                                     <div className="cc-product-details">
                                                         <div className="cc-product-main-row">
                                                             <div className="cc-product-info">
                                                                 <h3 className="cc-product-name">{product.name}</h3>
                                                                 <div className="cc-product-meta">
                                                                     <span className="cc-product-code">PRODUCT CODE: {product.productCode}</span>
-                                                                    <div className="cc-availability">
-                                                                        <span className="cc-availability-dot"></span>
-                                                                        <span>Available</span>
-                                                                    </div>
+                                    <div className="cc-availability">
+                                        <span className="cc-availability-dot" aria-hidden="true"></span>
+                                        <span>Available</span>
+                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div className="cc-product-controls">
@@ -598,13 +598,13 @@ const CleverCommerce = () => {
                                                                         ) : (
                                                                             <>
                                                                                 <div className="cc-elite-badge">Elite</div>
-                                                                                <span 
-                                                                                    className="cc-promo-text cc-promo-link" 
-                                                                                    onClick={() => setShowElitePromoModal(true)}
-                                                                                    style={{ cursor: 'pointer' }}
-                                                                                >
-                                                                                    Check out and get 50% off on selected services!
-                                                                                </span>
+                                                <button
+                                                    className="cc-promo-text cc-promo-link" 
+                                                    onClick={() => setShowElitePromoModal(true)}
+                                                    type="button"
+                                                >
+                                                    Check out and get 50% off on selected services!
+                                                </button>
                                                                             </>
                                                                         )}
                                                                     </div>
@@ -615,16 +615,17 @@ const CleverCommerce = () => {
                                                                         <React.Fragment key={service.id}>
                                                                             <div className="cc-service-item">
                                                                                 <div className="cc-service-left">
-                                                                                    <label className="cc-service-checkbox">
-                                                                                        <input
-                                                                                            type="checkbox"
-                                                                                            checked={service.selected}
-                                                                                            onChange={() => toggleService(service.id)}
-                                                                                        />
-                                                                                        <span className="cc-checkmark"></span>
-                                                                                    </label>
-                                                                                    <div className="cc-service-info">
-                                                                                        <span className="cc-service-name">{service.name}</span>
+                                                    <label className="cc-service-checkbox">
+                                                        <input
+                                                            type="checkbox"
+                                                            checked={service.selected}
+                                                            onChange={() => toggleService(service.id)}
+                                                            aria-label={`Add ${service.name} to cart`}
+                                                        />
+                                                        <span className="cc-checkmark" aria-hidden="true"></span>
+                                                    </label>
+                                                    <div className="cc-service-info">
+                                                        <span id={`service-${service.id}`} className="cc-service-name">{service.name}</span>
                                                                                         <button 
                                                                                             className="cc-details-link" 
                                                                                             onClick={() => {
@@ -982,7 +983,7 @@ const CleverCommerce = () => {
                                 <div className="cc-seller-drawer-info">
                                     <h3 className="cc-seller-drawer-title">Clean House</h3>
                                     <div className="cc-seller-page-rating">
-                                        <div className="cc-rating-stars">
+                                        <div className="cc-rating-stars" role="img" aria-label="4.7 out of 5 stars">
                                             {[...Array(4)].map((_, i) => (
                                                 <svg key={`full-${i}`} width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                     <path d="M8 0L10.163 5.528L16 6.112L11.82 9.944L12.944 16L8 12.944L3.056 16L4.18 9.944L0 6.112L5.837 5.528L8 0Z" fill="#FFD700"/>
@@ -1077,12 +1078,12 @@ const CleverCommerce = () => {
                                             return (
                                                 <div key={product.id} className="cc-carousel-item">
                                                     <div className="cc-carousel-product-image">
-                                                        <img src={product.image} alt="" />
+                                                        <img src={product.image} alt={product.name} />
                                                     </div>
                                                     <div className="cc-carousel-product-info">
                                                         <h4 className="cc-carousel-product-name">{product.name}</h4>
                                                         <div className="cc-seller-product-rating">
-                                                            <div className="cc-rating-stars">
+                                                            <div className="cc-rating-stars" role="img" aria-label={`${product.rating} out of 5 stars`}>
                                                                 {[...Array(fullStars)].map((_, i) => (
                                                                     <svg key={`full-${i}`} width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                                         <path d="M8 0L10.163 5.528L16 6.112L11.82 9.944L12.944 16L8 12.944L3.056 16L4.18 9.944L0 6.112L5.837 5.528L8 0Z" fill="#FFD700"/>
@@ -1294,7 +1295,7 @@ const CleverCommerce = () => {
                             <div className="cc-modal-body">
                                 {service.image && (
                                     <div className="cc-service-image-container">
-                                        <img src={service.image} alt="" className="cc-service-image" />
+                                        <img src={service.image} alt={service.name} className="cc-service-image" />
                                     </div>
                                 )}
                                 
@@ -1364,7 +1365,7 @@ const CleverCommerce = () => {
 
             {/* Snackbar */}
             {showSnackbar && (
-                <div className="cc-snackbar">
+                <div className="cc-snackbar" role="alert" aria-live="polite">
                     <span>{removedProduct ? 'Product removed' : 'Elite program added successfully!'}</span>
                     {removedProduct && (
                         <button className="cc-snackbar-undo" onClick={undoRemoveProduct}>
@@ -1376,14 +1377,14 @@ const CleverCommerce = () => {
 
             {/* Service Snackbar */}
             {serviceSnackbar.show && (
-                <div className="cc-snackbar">
+                <div className="cc-snackbar" role="alert" aria-live="polite">
                     <span>{serviceSnackbar.message}</span>
                 </div>
             )}
 
             {/* Elite Removed Snackbar */}
             {showEliteRemovedSnackbar && (
-                <div className="cc-snackbar">
+                <div className="cc-snackbar" role="alert" aria-live="polite">
                     <span>Elite program removed from cart</span>
                 </div>
             )}

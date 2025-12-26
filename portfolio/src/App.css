@@ -317,6 +317,9 @@ a:focus-visible {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .project-tag {
@@ -1190,7 +1193,7 @@ a:focus-visible {
 }
 
 .mobile-nav-list a:hover {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .mobile-nav-list a.active {
@@ -1228,7 +1231,7 @@ a:focus-visible {
 }
 
 .nav-list a:hover {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .nav-list a.active {
@@ -1247,7 +1250,7 @@ a:focus-visible {
 }
 
 .work-link:hover {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .content p:last-child {

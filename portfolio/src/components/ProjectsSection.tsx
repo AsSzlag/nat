@@ -64,7 +64,7 @@ const ProjectsSection: React.FC = () => {
   ]
 
   return (
-    <section id="work" className="projects-section">
+    <section id="work" className="projects-section" aria-label="Case Studies">
       <div className="projects-grid">
         {projects.map((project, index) => (
           <ProjectCard

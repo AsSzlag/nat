@@ -27,6 +27,12 @@
   opacity: 0.7;
 }
 
+.cc-back-link:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .cc-back-link svg {
   stroke: #303030;
 }
@@ -261,6 +267,12 @@
   opacity: 0.7;
 }
 
+.cc-action-btn:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .cc-action-btn svg {
   stroke: #FFFFFF;
   fill: none;
@@ -315,6 +327,12 @@
 .cc-seller-name:hover {
   opacity: 0.7;
   text-decoration: underline;
+}
+
+.cc-seller-name:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .cc-products-list {
@@ -447,6 +465,11 @@
   background-color: #F9FAFB;
 }
 
+.cc-quantity-btn:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+}
+
 .cc-quantity-value {
   flex: 1;
   text-align: center;
@@ -496,6 +519,12 @@
 
 .cc-remove-btn:hover {
   opacity: 0.7;
+}
+
+.cc-remove-btn:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .cc-remove-btn svg {
@@ -556,11 +585,22 @@
 .cc-promo-link {
   cursor: pointer;
   transition: opacity 0.2s;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
 }
 
 .cc-promo-link:hover {
-  opacity: 0.7;
+  opacity: 0.8;
   text-decoration: underline;
+}
+
+.cc-promo-link:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
 }
 
 .cc-services-list {
@@ -657,6 +697,12 @@
 
 .cc-details-link:hover {
   text-decoration: underline;
+}
+
+.cc-details-link:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .cc-service-price {
@@ -860,6 +906,11 @@
   background-color: #2C5282;
 }
 
+.cc-checkout-btn:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+}
+
 /* Modal */
 .cc-modal-overlay {
   position: fixed;
@@ -964,6 +1015,12 @@
 
 .cc-modal-close:hover {
   opacity: 0.7;
+}
+
+.cc-modal-close:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .cc-modal-body {
@@ -1200,6 +1257,11 @@
   background-color: #2C5282;
 }
 
+.cc-modal-btn-primary:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+}
+
 .cc-modal-btn-secondary {
   background-color: #FFFFFF;
   color: #1A365D;
@@ -1207,6 +1269,11 @@
 
 .cc-modal-btn-secondary:hover {
   background-color: #F9FAFB;
+}
+
+.cc-modal-btn-secondary:focus-visible {
+  outline: 2px solid #1A365D;
+  outline-offset: 2px;
 }
 
 /* Elite Cart Item */
@@ -1314,6 +1381,12 @@
 
 .cc-elite-benefits-link:hover {
   text-decoration: underline;
+}
+
+.cc-elite-benefits-link:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .cc-elite-cart-controls {
@@ -2233,6 +2306,11 @@
   background-color: #2C5282;
 }
 
+.cc-empty-cart-btn:focus-visible {
+  outline: 2px solid #0D4ED4;
+  outline-offset: 2px;
+}
+
 .cc-recommended-section {
   display: flex;
   flex-direction: column;
@@ -2361,6 +2439,11 @@
   background-color: #F9FAFB;
 }
 
+.cc-carousel-add-btn:focus-visible {
+  outline: 2px solid #1A365D;
+  outline-offset: 2px;
+}
+
 .cc-carousel-arrow {
   position: absolute;
   top: 50%;
@@ -2397,6 +2480,11 @@
 
 .cc-carousel-arrow:active {
   transform: translateY(-50%) scale(0.95);
+}
+
+.cc-carousel-arrow:focus-visible {
+  outline: 2px solid #1A365D;
+  outline-offset: 2px;
 }
 
 .cc-carousel-arrow svg {

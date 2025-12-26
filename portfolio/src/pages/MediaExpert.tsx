@@ -31,19 +31,19 @@ const MediaExpert: React.FC = () => {
               </div>
               <p className="media-expert-nda">NDA Protected</p>
             </div>
-            <div >
+            <div className="media-expert-hero-image">
               <img src={mediaExpertImage} alt="Media Expert mobile app interface showing the App Store listing and various app screens" className="media-expert-img" />
             </div>
           </div>
         </div>
 
         {/* Section 1: Easy reordering */}
-        <div className="media-expert-section">
+        <div className="media-expert-section" role="region" aria-labelledby="easy-reordering-title">
           <div className="media-expert-section-content">
             <div className="media-expert-section-header">
               <div className="media-expert-section-text">
                 <div className="media-expert-section-title-group">
-                  <h2 className="media-expert-section-title">Easy reordering & boosting FMCG retention</h2>
+                  <h2 id="easy-reordering-title" className="media-expert-section-title">Easy reordering & boosting FMCG retention</h2>
                   <div className="media-expert-tags">
                     <span>#Ecommerce</span>
                     <span>#Retention</span>
@@ -61,24 +61,24 @@ const MediaExpert: React.FC = () => {
                 </div>
               </div>
               <div className="media-expert-section-image">
-                <img src={Reordering} alt="" className="media-expert-img" />
+                <img src={Reordering} alt="Animation showing the easy reordering feature in the Media Expert app" className="media-expert-img" />
               </div>
             </div>
             <div className="media-expert-highlights">
               <div className="media-expert-highlight-item">
-                <h4 className="media-expert-highlight-title">Smart "Buy Again" Ecosystem</h4>
+                <h3 className="media-expert-highlight-title">Smart "Buy Again" Ecosystem</h3>
                 <p className="media-expert-highlight-text">
                   Designed contextual entry points in order history and a high-conversion Side-Drawer that allows users to bulk-add regulars with real-time price validation.
                 </p>
               </div>
               <div className="media-expert-highlight-item">
-                <h4 className="media-expert-highlight-title">Edge Case Mastery</h4>
+                <h3 className="media-expert-highlight-title">Edge Case Mastery</h3>
                 <p className="media-expert-highlight-text">
                   Defined complex logic for product unavailability, ensuring the user flow remained "unblocked" even when stock was low.
                 </p>
               </div>
               <div className="media-expert-highlight-item">
-                <h4 className="media-expert-highlight-title">Data-Driven Iteration</h4>
+                <h3 className="media-expert-highlight-title">Data-Driven Iteration</h3>
                 <p className="media-expert-highlight-text">
                   Beyond the UI, I defined the KPI framework, monitoring conversion lifts and behavioral shifts to refine the experience post-launch.
                 </p>
@@ -88,16 +88,16 @@ const MediaExpert: React.FC = () => {
         </div>
 
         {/* Section 2: Product review */}
-        <div className="media-expert-section">
+        <div className="media-expert-section" role="region" aria-labelledby="product-review-title">
           <div className="media-expert-section-content">
             <div className="media-expert-section-header">
               <div className="media-expert-section-text">
                 <div className="media-expert-section-title-group">
-                  <h2 className="media-expert-section-title">Improving product review process</h2>
+                  <h2 id="product-review-title" className="media-expert-section-title">Improving product review process</h2>
                   <div className="media-expert-tags">
                     <span>#Ecommerce</span>
                     <span>#ProductReview</span>
-                    <span>#ProductReview</span>
+                    <span>#UserEngagement</span>
                   </div>
                 </div>
                 <p className="media-expert-description">
@@ -117,13 +117,13 @@ const MediaExpert: React.FC = () => {
             <div className="media-expert-highlights-grid">
               <div>
                 <div className="media-expert-highlight-item">
-                  <h4 className="media-expert-highlight-title">Frictionless Multi-Rating</h4>
+                  <h3 className="media-expert-highlight-title">Frictionless Multi-Rating</h3>
                   <p className="media-expert-highlight-text">
                     Instead of forcing users to rate items one-by-one, I designed a contextual side-drawer that allows users to select multiple products from a single order and complete reviews in one streamlined flow.
                   </p>
                 </div>
                 <div className="media-expert-highlight-item">
-                  <h4 className="media-expert-highlight-title">Legal & Compliance Leadership</h4>
+                  <h3 className="media-expert-highlight-title">Legal & Compliance Leadership</h3>
                   <p className="media-expert-highlight-text">
                     Acted as the design lead in consultations with Legal teams to ensure the flow complied with transparency regulations (e.g., Omnibus Directive), ensuring that only verified purchasers could leave reviews.
                   </p>
@@ -131,13 +131,13 @@ const MediaExpert: React.FC = () => {
               </div>
               <div>
                 <div className="media-expert-highlight-item">
-                  <h4 className="media-expert-highlight-title">System Integrity & Logic</h4>
+                  <h3 className="media-expert-highlight-title">System Integrity & Logic</h3>
                   <p className="media-expert-highlight-text">
                     Developed the logic for "already rated" states to prevent double-submissions, ensuring a clean database and a clear UI state for the user.
                   </p>
                 </div>
                 <div className="media-expert-highlight-item">
-                  <h4 className="media-expert-highlight-title">Post-Purchase Loop</h4>
+                  <h3 className="media-expert-highlight-title">Post-Purchase Loop</h3>
                   <p className="media-expert-highlight-text">
                     Created a dedicated "My Reviews" tab within the customer account, transforming a one-time action into a permanent part of the user's shopping history.
                   </p>
@@ -148,12 +148,12 @@ const MediaExpert: React.FC = () => {
         </div>
 
         {/* Section 3: ME Box */}
-        <div className="media-expert-section">
+        <div className="media-expert-section" role="region" aria-labelledby="me-box-title">
           <div className="media-expert-mebox-content">
             <div className="media-expert-mebox-header">
               <div className="media-expert-mebox-text">
                 <div className="media-expert-mebox-title-group">
-                  <h2 className="media-expert-mebox-title">ME Box - launching a Parcel Locker Ecosystem</h2>
+                  <h2 id="me-box-title" className="media-expert-mebox-title">ME Box - launching a Parcel Locker Ecosystem</h2>
                   <div className="media-expert-tags">
                     <span>#Omnichannel</span>
                     <span>#ParcelLocker</span>
@@ -177,13 +177,13 @@ const MediaExpert: React.FC = () => {
             <div className="media-expert-mebox-highlights">
               <div className="media-expert-mebox-highlights-row">
                 <div className="media-expert-highlight-item">
-                  <h4 className="media-expert-highlight-title">Service Design & UX Audit</h4>
+                  <h3 className="media-expert-highlight-title">Service Design & UX Audit</h3>
                   <p className="media-expert-highlight-text">
                     I didn't just design the app, I conducted a full CX Audit of the physical pickup process. This included mapping the user journey from the digital notification to the physical interaction at the locker, ensuring the flow was intuitive in real-world conditions.
                   </p>
                 </div>
                 <div className="media-expert-highlight-item">
-                  <h4 className="media-expert-highlight-title">Business Analysis & Benchmarking</h4>
+                  <h3 className="media-expert-highlight-title">Business Analysis & Benchmarking</h3>
                   <p className="media-expert-highlight-text">
                     Performed a deep-dive SWOT analysis and competitive benchmarking to identify gaps in existing locker services. This allowed us to build a "best-in-class" solution that offered unique advantages.
                   </p>
@@ -191,13 +191,13 @@ const MediaExpert: React.FC = () => {
               </div>
               <div className="media-expert-mebox-highlights-row">
                 <div className="media-expert-highlight-item">
-                  <h4 className="media-expert-highlight-title">Omnichannel Brand Integration</h4>
+                  <h3 className="media-expert-highlight-title">Omnichannel Brand Integration</h3>
                   <p className="media-expert-highlight-text">
                     I supported the marketing department in defining the "ME Box" identity, including naming, logo design, and visual ID, ensuring the digital interface and the physical locker were perfectly aligned.
                   </p>
                 </div>
                 <div className="media-expert-highlight-item">
-                  <h4 className="media-expert-highlight-title">Complex Process Mapping</h4>
+                  <h3 className="media-expert-highlight-title">Complex Process Mapping</h3>
                   <p className="media-expert-highlight-text">
                     Beyond the "happy path," I designed the logic for failed pickups and returns, defining what happens when a parcel remains uncollected, which was critical for store operations.
                   </p>

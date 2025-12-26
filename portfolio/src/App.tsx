@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout'
+import ScrollToTop from './components/ScrollToTop'
 import Hero from './components/Hero'
 import ProjectsSection from './components/ProjectsSection'
 import About from './pages/About'
@@ -21,6 +22,7 @@ function HomePage() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/case-studies" element={<Navigate to="/" replace />} />

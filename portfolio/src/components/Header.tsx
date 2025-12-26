@@ -109,10 +109,10 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <nav className="nav" role="banner">
+      <nav className="nav" aria-label="Main navigation">
         <div className="nav-content">
-          <Link to="/" className="logo-link">
-            <img src={logo} alt="" className="logo" />
+          <Link to="/" className="logo-link" aria-label="Natalia Szlag - Home">
+            <img src={logo} alt="" className="logo" aria-hidden="true" />
           </Link>
           <ul className="nav-list">
             <li>

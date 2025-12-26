@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './CleverCommerce.css'
 
@@ -11,8 +10,8 @@ const SellerPage = () => {
   return (
     <div className="clever-commerce">
       <div className="cc-back-container">
-        <Link to="/clever-commerce" className="cc-back-link">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <Link to="/clever-commerce" className="cc-back-link" aria-label="Back to Cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <span>Back to Cart</span>

@@ -32,6 +32,7 @@ const Contact: React.FC = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="contact-item"
+                  aria-label="LinkedIn profile (opens in new tab)"
                 >
                   <div className="contact-icon">
                     <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i>
@@ -44,7 +45,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
           <div className="contact-image-section">
-            <img src={contactImage} alt="" className="contact-image-img" />
+            <img src={contactImage} alt="Contact illustration" className="contact-image-img" aria-hidden="true" />
           </div>
         </div>
       </div>

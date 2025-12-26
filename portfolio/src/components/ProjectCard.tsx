@@ -52,11 +52,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="project-content">
         <div className="project-header">
           <h2 className="project-title">{title}</h2>
-          <div className="project-tags">
+          <ul className="project-tags" aria-label="Project tags">
             {tags.map((tag, index) => (
-              <span key={index} className="project-tag">{tag}</span>
+              <li key={index} className="project-tag">{tag}</li>
             ))}
-          </div>
+          </ul>
         </div>
         <p className="project-description">{description}</p>
         <div className="project-actions">
@@ -81,7 +81,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
       <div className={`project-image ${imageClass}`} style={customStyle}>
-        <img src={image} alt="" className="project-image-img" />
+        <img src={image} alt={`${title} project screenshot`} className="project-image-img" />
       </div>
     </div>
   )
