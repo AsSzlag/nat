@@ -1,8 +1,19 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import aboutPortrait from '../assets/about-portrait.png'
+import downloadIcon from '../assets/download-icon.svg'
+import resumePdf from '../assets/NataliaSzlag_UX_resume.pdf'
 
 const About: React.FC = () => {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a')
+    link.href = resumePdf
+    link.download = 'NataliaSzlag_UX_resume.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <Layout>
       <div className="about-page">
@@ -28,12 +39,13 @@ const About: React.FC = () => {
           </div>
           <div className="about-hero-bottom">
             <button 
-              className="btn btn-tertiary"
+              className="btn btn-resume"
+              onClick={handleDownloadResume}
               type="button"
-              aria-label="Download resume"
+              aria-label="Download resume PDF"
             >
               Resume
-              <div className="btn-icon" aria-hidden="true"></div>
+              <img src={downloadIcon} alt="" className="btn-icon-img" aria-hidden="true" />
             </button>
             <p className="about-tagline">I see numbers behind the pixels.</p>
           </div>
@@ -44,7 +56,7 @@ const About: React.FC = () => {
           <h2 className="section-title">What I build?</h2>
           <div className="about-content-text">
             <p>
-              Inclusive & Scalable Systems I specialize in complex eCommerce ecosystems. My experience ranges from transforming a standard online store into a thriving Marketplace (and launching a startup that is now generating significant sales) to designing end-to-end subscription programs.
+              My experience ranges from transforming a standard online store into a thriving Marketplace (and launching a startup that is now generating significant sales) to designing end-to-end subscription programs.
             </p>
             <p>
               I am also a passionate accessibility enthusiast. For me, WCAG compliance is not just a checklist, but a mindset. I apply this strictly in digital projects, but also in broader Customer Experience (CX) scenarios. A prime example is my work on parcel lockers: I didn't just design the screen interface; I audited and optimized the entire process of receiving a parcel to ensure the physical interaction at the machine was accessible to all users.

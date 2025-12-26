@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       <div className="hero-cta">
         <div className="hero-line"></div>
         <button 
-          className="btn btn-hero" 
+          className="btn btn-resume" 
           onClick={handleDownloadResume}
           type="button"
           aria-label="Download resume PDF"

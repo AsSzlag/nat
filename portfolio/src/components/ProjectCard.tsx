@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import downloadIcon from '../assets/download-icon.svg'
 
 interface ProjectCardProps {
@@ -10,6 +11,9 @@ interface ProjectCardProps {
   image: string
   imageClass?: string
   customStyle?: React.CSSProperties
+  downloadFile?: string
+  downloadFileName?: string
+  linkTo?: string
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -20,8 +24,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   buttonText,
   image,
   imageClass = '',
-  customStyle
+  customStyle,
+  downloadFile,
+  downloadFileName,
+  linkTo
 }) => {
+  const handleButtonClick = () => {
+    if (downloadFile) {
+      const link = document.createElement('a')
+      link.href = downloadFile
+      link.download = downloadFileName || downloadFile.split('/').pop() || 'download.pdf'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    }
+  }
+
+  const buttonContent = (
+    <>
+      {buttonText}
+      {hasIcon && <img src={downloadIcon} alt="" className="btn-icon-img" aria-hidden="true" />}
+    </>
+  )
+
   return (
     <div className="project-card">
       <div className="project-content">
@@ -35,14 +60,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         <p className="project-description">{description}</p>
         <div className="project-actions">
-          <button 
-            className="btn btn-primary"
-            type="button"
-            aria-label={`${buttonText} - ${title}`}
-          >
-            {buttonText}
-            {hasIcon && <img src={downloadIcon} alt="" className="btn-icon-img" aria-hidden="true" />}
-          </button>
+          {linkTo ? (
+            <Link 
+              to={linkTo}
+              className="btn btn-primary"
+              aria-label={`${buttonText} - ${title}`}
+            >
+              {buttonContent}
+            </Link>
+          ) : (
+            <button 
+              className="btn btn-primary"
+              type="button"
+              onClick={handleButtonClick}
+              aria-label={`${buttonText} - ${title}`}
+            >
+              {buttonContent}
+            </button>
+          )}
         </div>
       </div>
       <div className={`project-image ${imageClass}`} style={customStyle}>

@@ -5,6 +5,10 @@ import checkoutSubscription from '../assets/checkout-subscription.png'
 import dashboardDelivery from '../assets/dashboard-delivery.png'
 import googleAdsDashboard from '../assets/google-ads-dashboard.png'
 import freeDeliveryProgram from '../assets/free-delivery-program.png'
+import checkoutSubscriptionPdf from '../assets/CheckoutSubsriptionOptimisation.pdf'
+import dashboardDeliveryPdf from '../assets/DashboardforDeliveryService.pdf'
+import googleAdsDashboardPdf from '../assets/GoogleAdsDashboard.pdf'
+import freeDeliveryProgramPdf from '../assets/FreeDeliveryProgram.pdf'
 
 const ProjectsSection: React.FC = () => {
   const projects = [
@@ -14,7 +18,8 @@ const ProjectsSection: React.FC = () => {
       description: "Driven UX Designer with a focus on marketplace and media ecosystems. Led multi-platform initiatives that optimized subscription programs, parcel lockers, and account dashboards, significantly increasing user retention and trust. Proven track record of delivering intuitive product solutions that translate complex user needs into measurable business growth.",
       hasIcon: false,
       buttonText: "View projects",
-      image: marketplaceMediaExpert
+      image: marketplaceMediaExpert,
+      linkTo: "/media-expert"
     },
     {
       title: "Checkout Subscription Optimisation",
@@ -22,7 +27,9 @@ const ProjectsSection: React.FC = () => {
       description: "Optimised the e-commerce subscription funnel by integrating a clear, value-driven purchase option directly within the shopping basket, targeting users at their highest point of intent.",
       hasIcon: true,
       buttonText: "Case study",
-      image: checkoutSubscription
+      image: checkoutSubscription,
+      downloadFile: checkoutSubscriptionPdf,
+      downloadFileName: "CheckoutSubsriptionOptimisation.pdf"
     },
     {
       title: "Dashboard for Delivery Service",
@@ -31,10 +38,8 @@ const ProjectsSection: React.FC = () => {
       hasIcon: true,
       buttonText: "Case study",
       image: dashboardDelivery,
-      customStyle: {
-        height: '419.96px',
-        boxShadow: '0px 4px 16px 0px rgba(150, 150, 150, 0.3), 0px -4px 16px 0px rgba(150, 150, 150, 0.25)'
-      }
+      downloadFile: dashboardDeliveryPdf,
+      downloadFileName: "DashboardforDeliveryService.pdf"
     },
     {
       title: "Google Ads Management Dashboard & Integration",
@@ -42,7 +47,9 @@ const ProjectsSection: React.FC = () => {
       description: "I directed the end-to-end product design for a large-scale Google Ads management tool, coordinating across Sales, Legal, IT, and Product teams. My scope encompassed the entire lifecycle—from conducting business interviews and defining information architecture to usability testing and final UI design. The project resulted in a complex dashboard featuring a status panel and over 200+ key elements, delivered through 1000+ working hours of rigorous development.",
       hasIcon: true,
       buttonText: "Case study",
-      image: googleAdsDashboard
+      image: googleAdsDashboard,
+      downloadFile: googleAdsDashboardPdf,
+      downloadFileName: "GoogleAdsDashboard.pdf"
     },
     {
       title: "Free delivery program",
@@ -50,7 +57,9 @@ const ProjectsSection: React.FC = () => {
       description: "I led the end-to-end design of a dual-sided delivery ecosystem, addressing the critical market insight that 88% of users prioritize free shipping. My scope spanned the full product lifecycle—from MVP definition and prototype testing to launching a robust Seller Dashboard capable of handling complex configurations and massive actions.",
       hasIcon: true,
       buttonText: "Case study",
-      image: freeDeliveryProgram
+      image: freeDeliveryProgram,
+      downloadFile: freeDeliveryProgramPdf,
+      downloadFileName: "FreeDeliveryProgram.pdf"
     }
   ]
 
@@ -66,7 +75,10 @@ const ProjectsSection: React.FC = () => {
             hasIcon={project.hasIcon}
             buttonText={project.buttonText}
             image={project.image}
-            customStyle={project.customStyle}
+            // customStyle={project.customStyle}
+            downloadFile={project.downloadFile}
+            downloadFileName={project.downloadFileName}
+            linkTo={project.linkTo}
           />
         ))}
       </div>

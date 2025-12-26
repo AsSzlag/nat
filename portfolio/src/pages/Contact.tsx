@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import contactImage from '../assets/contact-image.png'
-import contactIcon from '../assets/contact-icon.png'
 
 const Contact: React.FC = () => {
   return (
@@ -12,35 +11,35 @@ const Contact: React.FC = () => {
             <div className="contact-info">
               <h1 className="contact-title">Contact.</h1>
               <div className="contact-items">
-                <div className="contact-item">
+                <a href="mailto:nataliaszlag@gmail.com" className="contact-item">
                   <div className="contact-icon">
-                    <img src={contactIcon} alt="" className="contact-icon-img" />
+                    <i className="fa-regular fa-envelope" aria-hidden="true"></i>
                   </div>
-                  <a href="mailto:nataliaszlag@gmail.com" className="contact-text">
+                  <span className="contact-text">
                     nataliaszlag@gmail.com
-                  </a>
-                </div>
-                <div className="contact-item">
+                  </span>
+                </a>
+                <a href="tel:+48606354801" className="contact-item">
                   <div className="contact-icon">
-                    <img src={contactIcon} alt="" className="contact-icon-img" />
+                    <i className="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
                   </div>
-                  <a href="tel:+48606354801" className="contact-text">
+                  <span className="contact-text">
                     +48 606 354 801
-                  </a>
-                </div>
-                <div className="contact-item">
+                  </span>
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/natalia-szlag-3515891b8/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="contact-item"
+                >
                   <div className="contact-icon">
-                    <img src={contactIcon} alt="" className="contact-icon-img" />
+                    <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                   </div>
-                  <a 
-                    href="https://linkedin.com/in/nataliaszlag" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="contact-text"
-                  >
+                  <span className="contact-text">
                     LinkedIn
-                  </a>
-                </div>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
