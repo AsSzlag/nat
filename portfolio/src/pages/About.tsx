@@ -16,10 +16,16 @@ const About: React.FC = () => {
                 <h1 className="about-hero-title">About me.</h1>
                 <div className="about-hero-text-content">
                   <p>
-                    My path to UX wasn't linear, and that is my greatest asset. Before I started crafting interfaces, I was an Economic Analyst for a global bank, working with top-tier clients like Nestlé or Zurich Bank. Today, I use that analytical mindset not just to interpret numbers, but to champion the human behind the screen.
+                  I am a Senior UX/UI Designer who builds products that work for both the user and the business. With over 7 years of experience, I turn complex business requirements into intuitive, high-converting e-commerce experiences. My path covers the full spectrum of product growth: from building the Erli marketplace from the startup, to optimising the Media Expert ecosystem for maximum conversion.
                   </p>
                   <p>
-                    As a dedicated user advocate, I ensure that every design decision I make is backed by business logic and deep empathy, creating solutions that drive business growth without compromising user utility.
+                  My professional maturity is rooted in the corporate business world. Working as Business Analyst for multinational companies like UBS, Capgemini and Capita gave me a distinct analytical mindset. This background allows me to deeply analyse data and prepare solutions that don't just look good, but bring real numbers. Furthermore, it taught me how to navigate large international organizations and effectively cooperate with teams all over the world.
+                  </p>
+                  <p>
+                  I thrive in dynamic, cross-functional environments, collaborating closely with developers, project managers, and other designers. From this strong team foundation, I frequently step into the role of Lead Designer, taking ownership of projects and making critical decisions. I am comfortable presenting at the C-level, regularly discussing strategy and validating designs with CEOs to ensure total business alignment. 
+                  </p>
+                  <p>
+                  I bridge the gap between User-Centered Design and business logic, utilising AI tools and usability testing to ensure every design decision is data-driven. I am hands-on with my process, from leading initiatives like the discovery workshops for Media Expert sellers to optimise the internal platforms they use daily, to ensuring strict WCAG compliance. I design with empathy, but I validate with business logic.
                   </p>
                 </div>
               </div>
@@ -47,10 +53,10 @@ const About: React.FC = () => {
           <h2 id="what-i-build-title" className="section-title">What I build?</h2>
           <div className="about-content-text">
             <p>
-              My experience ranges from transforming a standard online store into a thriving Marketplace (and launching a startup that is now generating significant sales) to designing end-to-end subscription programs.
+            I specialize in building scalable e-commerce solutions that cater to the entire ecosystem, both B2C buyers and B2B sellers. My experience covers the full lifecycle of platform growth. I have transformed an online store into a profitable Marketplace (Media Expert). I also built as a Lead Designer a marketplace startup from scratch that is now generating significant sales (Erli). Additionally, I have been responsible for creating and optimising subscription programs.
             </p>
             <p>
-              I am also a passionate accessibility enthusiast. For me, WCAG compliance is not just a checklist, but a mindset. I apply this strictly in digital projects, but also in broader Customer Experience (CX) scenarios. A prime example is my work on parcel lockers: I didn't just design the screen interface; I audited and optimized the entire process of receiving a parcel to ensure the physical interaction at the machine was accessible to all users.
+            I combine this business focus with a strict adherence to accessibility. For me, WCAG is not just a checklist, but a mindset. This is best illustrated by my work on parcel lockers, where I optimized the total Customer Experience (CX). I audited both the screen interface and the physical hardware interaction, ensuring that receiving a parcel is a seamless process for every user.
             </p>
           </div>
         </section>
@@ -60,7 +66,7 @@ const About: React.FC = () => {
           <h2 id="strategic-approach-title" className="section-title">My Strategic Approach & Modern Workflow</h2>
           <div className="about-content-text">
             <p>
-              I am a firm believer in utility over aesthetics. To achieve the best results efficiently, I embrace AI-augmented workflows, using LLMs and AI-to-Figma tools to speed up prototyping and research. This allows me to focus my energy on what matters most: strategy and problem-solving. I "chunk" processes into MVPs to deliver value ASAP, analyzing corner cases and validating every step with legal departments and development teams.
+            I am a firm believer in utility over aesthetics. Before I open a design tool, I translate complex requirements into clear process maps and block diagrams. This visual logic allows me to "chunk" processes into MVPs and analyze corner cases early. To achieve efficiency, I embrace AI augmented workflows, using LLMs and AI to Figma tools to speed up prototyping. This allows me to focus my energy on what matters most: validating every step with legal departments, development teams, and business stakeholders.
             </p>
           </div>
         </section>
@@ -70,7 +76,7 @@ const About: React.FC = () => {
           <h2 id="leadership-title" className="section-title">Leadership & Collaboration</h2>
           <div className="about-content-text">
             <p>
-              I don't just design; I partner with the business. I am experienced in preparing briefs and presenting to C-level executives, where I negotiate solutions and advocate for the user. I also believe in the power of Omnichannel, bridging the gap between offline retail and online experiences. Within the team, I act as a mentor to junior designers and often step up to support Project Managers in keeping delivery on track.
+              I don't just design, I partner with the business. I am experienced in preparing briefs and presenting to C-level executives, where I negotiate solutions and advocate for the user. I also believe in the power of Omnichannel, bridging the gap between offline retail and online experiences. Within the team, I act as a mentor to junior designers and often step up to support Project Managers in keeping delivery on track.
             </p>
           </div>
         </section>
@@ -84,10 +90,10 @@ const About: React.FC = () => {
           <div className="about-beyond-content">
             <div className="about-beyond-text">
               <p>
-                Global Perspective & Life Offline Living in 6 different European countries (including Austria, Italy, France, and Germany) has taught me adaptability and opened my eyes to how different cultures interact with technology. I draw inspiration from everywhere—sometimes the best eCommerce solution comes from observing a video game interface or a real-world interaction.
+                Living in several different European countries (including Austria, Italy, France, and Germany) has taught me adaptability and opened my eyes to how different cultures interact with technology. I draw inspiration from everywhere, sometimes the best e-commerce solution comes from observing a video game interface or a real-world interaction.
               </p>
               <p>
-                Off-duty, I thrive on routine and nature. You'll find me starting my day with a dog walk in the park or spending my weekends glued to Formula 1 (I love the suspense of the race and the thrill of seeing a bold strategy pay off). I also have the soul of a pastry chef—in my free time, I test new recipes, always looking for ways to sweeten life for others, both literally and through better design.
+              Off-duty, I am a nature enthusiast. You’ll find me starting my day with a dog walk or clocking thousands of steps exploring the city.I am also a huge Formula 1 fan; I love the suspense of the race and the thrill of seeing a bold strategy pay off. I have the soul of a pastry chef, I love the deep focus it requires and the fact that, much like in analytics, you need exact numbers and precise proportions to obtain a perfect result.
               </p>
             </div>
             <blockquote className="about-beyond-quote">

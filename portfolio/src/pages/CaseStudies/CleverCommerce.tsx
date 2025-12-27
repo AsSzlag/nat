@@ -531,19 +531,19 @@ const CleverCommerce = () => {
                                         {products.map((product, index) => (
                                             <React.Fragment key={product.id}>
                                                 <div className="cc-product-item">
-                                            <div className="cc-product-image">
+                                                    <div className="cc-product-image">
                                                 <img src={product.image} alt={product.name} />
-                                            </div>
+                                                    </div>
                                                     <div className="cc-product-details">
                                                         <div className="cc-product-main-row">
                                                             <div className="cc-product-info">
                                                                 <h3 className="cc-product-name">{product.name}</h3>
                                                                 <div className="cc-product-meta">
                                                                     <span className="cc-product-code">PRODUCT CODE: {product.productCode}</span>
-                                    <div className="cc-availability">
+                                                                    <div className="cc-availability">
                                         <span className="cc-availability-dot" aria-hidden="true"></span>
-                                        <span>Available</span>
-                                    </div>
+                                                                        <span>Available</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div className="cc-product-controls">
@@ -599,11 +599,11 @@ const CleverCommerce = () => {
                                                                             <>
                                                                                 <div className="cc-elite-badge">Elite</div>
                                                 <button
-                                                    className="cc-promo-text cc-promo-link" 
-                                                    onClick={() => setShowElitePromoModal(true)}
+                                                                                    className="cc-promo-text cc-promo-link" 
+                                                                                    onClick={() => setShowElitePromoModal(true)}
                                                     type="button"
-                                                >
-                                                    Check out and get 50% off on selected services!
+                                                                                >
+                                                                                    Check out and get 50% off on selected services!
                                                 </button>
                                                                             </>
                                                                         )}
@@ -615,16 +615,16 @@ const CleverCommerce = () => {
                                                                         <React.Fragment key={service.id}>
                                                                             <div className="cc-service-item">
                                                                                 <div className="cc-service-left">
-                                                    <label className="cc-service-checkbox">
-                                                        <input
-                                                            type="checkbox"
-                                                            checked={service.selected}
-                                                            onChange={() => toggleService(service.id)}
+                                                                                    <label className="cc-service-checkbox">
+                                                                                        <input
+                                                                                            type="checkbox"
+                                                                                            checked={service.selected}
+                                                                                            onChange={() => toggleService(service.id)}
                                                             aria-label={`Add ${service.name} to cart`}
-                                                        />
+                                                                                        />
                                                         <span className="cc-checkmark" aria-hidden="true"></span>
-                                                    </label>
-                                                    <div className="cc-service-info">
+                                                                                    </label>
+                                                                                    <div className="cc-service-info">
                                                         <span id={`service-${service.id}`} className="cc-service-name">{service.name}</span>
                                                                                         <button 
                                                                                             className="cc-details-link" 
