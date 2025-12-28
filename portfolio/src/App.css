@@ -440,7 +440,7 @@ a:focus-visible {
 }
 
 .about-hero-text-content p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 64px;
 }
 
 .about-hero-image {
@@ -1602,6 +1602,10 @@ a:focus-visible {
   .project-image {
     order: -1;
     height: 250px;
+  }
+
+  .about-hero-text-content p:last-child {
+    margin-bottom: 16px;
   }
 
   .project-card:nth-child(3) .project-image {
