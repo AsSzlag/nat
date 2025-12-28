@@ -25,13 +25,13 @@ const MediaExpert: React.FC = () => {
                   <li>Reported record-breaking annual revenues of $5.98 Billion (PLN 21.5 billion) for the 2024/2025 fiscal year.</li>
                   <li>Achieved an EBITDA exceeding $278 Million (PLN 1 billion), with net profits climbing to over $195 Million (PLN 700 million).</li>
                   <li>Supports its digital ecosystem with a network of over 600 stores and a massive $139 Million (PLN 500 million) state of the art logistics hub.</li>
-                <li>The app exceeds a million downloads on Google Play alone.</li>
+                  <li>The app exceeds a million downloads on Google Play alone.</li>
                   <li>The mobile app maintains a 4.9/5 rating on the App Store (based on 20,000+ reviews).</li>
                 </ul>
               </div>
               <p className="media-expert-nda">NDA Protected</p>
             </div>
-            <div className="media-expert-hero-image">
+            <div className="media-expert-hero-image-top">
               <img src={mediaExpertImage} alt="Media Expert mobile app interface showing the App Store listing and various app screens" className="media-expert-img" />
             </div>
           </div>
@@ -114,34 +114,25 @@ const MediaExpert: React.FC = () => {
                 <img src={ProductReview} alt="Product review process interface" className="media-expert-img" />
               </div>
             </div>
-            <div className="media-expert-highlights-grid">
-              <div>
-                <div className="media-expert-highlight-item">
-                  <h3 className="media-expert-highlight-title">Frictionless Multi-Rating</h3>
-                  <p className="media-expert-highlight-text">
-                    Instead of forcing users to rate items one-by-one, I designed a contextual side-drawer that allows users to select multiple products from a single order and complete reviews in one streamlined flow.
-                  </p>
-                </div>
-                <div className="media-expert-highlight-item">
-                  <h3 className="media-expert-highlight-title">Legal & Compliance Leadership</h3>
-                  <p className="media-expert-highlight-text">
-                    Acted as the design lead in consultations with Legal teams to ensure the flow complied with transparency regulations (e.g., Omnibus Directive), ensuring that only verified purchasers could leave reviews.
-                  </p>
-                </div>
+            <div className="media-expert-highlights">
+
+              <div className="media-expert-highlight-item">
+                <h3 className="media-expert-highlight-title">Frictionless Multi-Rating</h3>
+                <p className="media-expert-highlight-text">
+                  Instead of forcing users to rate items one by one, I designed a contextual side-drawer that allows users to select multiple products from a single order and complete reviews in one streamlined flow.
+                </p>
               </div>
-              <div>
-                <div className="media-expert-highlight-item">
-                  <h3 className="media-expert-highlight-title">System Integrity & Logic</h3>
-                  <p className="media-expert-highlight-text">
-                    Developed the logic for "already rated" states to prevent double-submissions, ensuring a clean database and a clear UI state for the user.
-                  </p>
-                </div>
-                <div className="media-expert-highlight-item">
-                  <h3 className="media-expert-highlight-title">Post-Purchase Loop</h3>
-                  <p className="media-expert-highlight-text">
-                    Created a dedicated "My Reviews" tab within the customer account, transforming a one-time action into a permanent part of the user's shopping history.
-                  </p>
-                </div>
+              <div className="media-expert-highlight-item">
+                <h3 className="media-expert-highlight-title">Legal & Compliance Leadership</h3>
+                <p className="media-expert-highlight-text">
+                  Acted as the design lead in consultations with Legal teams to ensure the flow complied with transparency regulations, ensuring that only verified purchasers could leave reviews.
+                </p>
+              </div>
+              <div className="media-expert-highlight-item">
+                <h3 className="media-expert-highlight-title">System Integrity & Logic</h3>
+                <p className="media-expert-highlight-text">
+                  Developed the logic for already rated products to prevent double reviews, ensuring a clean database and a clear UI state for the user.
+                </p>
               </div>
             </div>
           </div>
@@ -161,7 +152,7 @@ const MediaExpert: React.FC = () => {
                   </div>
                 </div>
                 <p className="media-expert-description">
-                  In a fast-paced retail market, consumer behavior has shifted toward total autonomy. Customers no longer want to be restricted by store opening hours or wait in checkout lines to collect a package; they demand the speed and flexibility of 24/7 self-service pickup. Simultaneously, the rapid growth of e-commerce was putting an unsustainable operational strain on store staff. The ME Box project was conceived to meet this market demand—providing a high-speed, "on-your-own-terms" pickup experience while significantly offloading manual tasks from store clerks to an automated system.
+                  In a fast-paced retail market, consumer behavior has shifted toward total autonomy. Customers no longer want to be restricted by store opening hours or wait in checkout lines to collect a package. They demand the speed and flexibility of 24/7 self-service pickup. Simultaneously, the store staff have to deal with rapid growth of e-commerce orders. The ME Box project was conceived to meet this market demand, by providing a high-speed, "on your own terms" pickup experience while significantly offloading manual tasks from store staff to an automated system.
                 </p>
                 <div className="media-expert-role">
                   <h3 className="media-expert-role-title">My Role</h3>
@@ -179,7 +170,7 @@ const MediaExpert: React.FC = () => {
                 <div className="media-expert-highlight-item">
                   <h3 className="media-expert-highlight-title">Service Design & UX Audit</h3>
                   <p className="media-expert-highlight-text">
-                    I didn't just design the app, I conducted a full CX Audit of the physical pickup process. This included mapping the user journey from the digital notification to the physical interaction at the locker, ensuring the flow was intuitive in real-world conditions.
+                    I didn't just design the online flows, I conducted a full CX Audit of the physical pickup process. This included mapping the user journey from the digital notification to the physical interaction at the locker, ensuring the flow was intuitive in real-world conditions.
                   </p>
                 </div>
                 <div className="media-expert-highlight-item">
@@ -204,6 +195,28 @@ const MediaExpert: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Section 4: Other notable projects */}
+        <div className="media-expert-projects-section" role="region" aria-labelledby="other-projects-title">
+          <div className="media-expert-projects-content">
+            <h2 id="other-projects-title" className="media-expert-projects-title">Other notable projects</h2>
+            <ul className="media-expert-projects-list">
+              <li>Mobile App design</li>
+              <li>E-commerce to Marketplace transformation</li>
+              <li>Customer Account usability optimisation</li>
+              <li>"Media Expert Plus" subscription retention - renewal and reactivation flows</li>
+              <li>Subscription upsell strategy in cart and checkout</li>
+              <li>Discount and coupon system usability redesign</li>
+              <li>Order cancellation flows - from Customer Account and e-mail</li>
+              <li>Order status flow optimisation</li>
+              <li>Government "Bon dla Nauczyciela" program integration</li>
+              <li>Proof of purchase upload process optimisation</li>
+              <li>Unified QR code based pickup system (in store and Parcel Locker) - designed for both Customers and Seller systems</li>
+              <li>In-store Seller Panel optimisation - Discovery workshops and strategic recommendations</li>
+              <li>Comprehensive WCAG Accessibility implementation</li>
+            </ul>
           </div>
         </div>
       </div>
